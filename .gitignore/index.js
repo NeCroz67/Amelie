@@ -1,9 +1,6 @@
 const Discord = require("discord.js"); //surtout pas toucher
 
 
-
-
-
 const client = new Discord.Client(); //surtout pas t
 
 const ClientID = "631001858118516736"
@@ -96,6 +93,6 @@ client.on('message', function (message) {
 
             
 
-           client.user.setActivity(`%help | Support ${client.guilds.size} serveur`);
+           client.user.setActivity(`Je t'aime ❤️`);
 
 });
