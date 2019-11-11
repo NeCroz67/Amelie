@@ -7,7 +7,7 @@ const ClientID = "631001858118516736"
 
 var token = (process.env.TOKEN)
 
-const prefix = "%" // Choix de votre préfix entre les ""   
+const prefix = "'" // Choix de votre préfix entre les ""   
 
 
 
