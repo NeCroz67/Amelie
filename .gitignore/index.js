@@ -1,8 +1,8 @@
 const Discord = require("discord.js"); //surtout pas toucher
 
-const fs = require('fs');
 
-const warns = JSON.parse(fs.readFileSync('./warns.json'))
+
+
 
 const client = new Discord.Client(); //surtout pas t
 
@@ -12,7 +12,7 @@ var token = (process.env.TOKEN)
 
 const prefix = "%" // Choix de votre préfix entre les ""   
 
-const mp = "631001858118516736" 
+
 
 client.login (process.env.TOKEN1);
 
