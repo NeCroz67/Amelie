@@ -33,7 +33,6 @@ client.on('message', function (message) {
 
          if(message.content.startsWith(prefix + "mpall")){
 
-    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
 
         message.delete()
 
