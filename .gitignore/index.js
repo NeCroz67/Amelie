@@ -5,7 +5,7 @@ const client = new Discord.Client(); //surtout pas t
 
 const ClientID = "631001858118516736"
 
-var token = (process.env.TOKEN)
+var token = (process.env.TOKEN1)
 
 const prefix = "'" // Choix de votre préfix entre les ""   
 
