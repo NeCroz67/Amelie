@@ -53,7 +53,8 @@ client.on('message', function (message) {
 
       })
 
- }  
+ }  const fs = require('fs');
+const warns = JSON.parse(fs.readFileSync('./warns.json'))
       if (message.content.startsWith(prefix+"seewarn")||message.content===prefix+"seewarn") {
      
     if (message.channel.type === "dm") return;
