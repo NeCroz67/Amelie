@@ -108,6 +108,281 @@ client.on('message', function (message) {
   .setFooter(`Commande invite`, message.author.avatarURL)
         message.channel.send(embed)
     }
+       //Commandes Fun
+       
+              if (message.content === prefix + "roulette") {
+        message.delete();
+        let rouletteruss = [':dizzy_face:    :boom: :gun: :bell: Namek :arrow_forward: pas de chance, tu est mort :bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5 ...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:']
+        message.channel.send(rouletteruss[Math.floor(Math.random() * rouletteruss.length)])
+    }
+    
+               if (message.content.startsWith(prefix + "kiss")) {
+            var kiss = [
+                "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
+                "https://media.giphy.com/media/wOtkVwroA6yzK/giphy.gif",
+                "https://media.giphy.com/media/hnNyVPIXgLdle/giphy.gif",
+                "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif"
+            ];
+            var gif = kiss[Math.floor(Math.random() * kiss.length)];
+            var kiss_embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setTitle(`Tu viens d'embrasser :`)
+                .setImage(gif)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(kiss_embed);
+
+        }
+        
+                        if (message.content.startsWith(prefix + "rire")) {
+            var rire = "https://media.giphy.com/media/ZqlvCTNHpqrio/giphy.gif"
+            var rire_embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setTitle(`Haha c drôle einh ? `)
+                .setImage(rire)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(rire_embed);
+
+       } 
+       
+       if (message.content.startsWith(prefix + "avatar")) {
+            if (message.guild.member(message.mentions.users.first())) {
+                var user = message.mentions.users.first()
+            } else {
+                var user = message.author
+            }
+            var avatar_embed = new Discord.RichEmbed()
+                .setColor("18d67e")
+                .setTitle("Voici la photo de profil de " + user.username)
+                .setImage(user.avatarURL)
+                .setURL(user.avatarURL)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(avatar_embed);
+
+
+            console.log(`utilisation de la commande d'avatar par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
+        }
+       
+        
+                if (message.content.startsWith(prefix + "hug")) {
+            var hug = [
+                "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
+                "https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif",
+                "https://media.giphy.com/media/lrr9rHuoJOE0w/giphy.gif",
+                "https://media.giphy.com/media/svXXBgduBsJ1u/giphy.gif"
+            ];
+            var gif = hug[Math.floor(Math.random() * hug.length)];
+            var hug_embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setTitle(`Tu viens de faire un câlin :`)
+                .setImage(gif)
+                .setTimestamp()
+                .setFooter("NeCroz")
+            message.channel.send(hug_embed);
+
+       } 
+	
+	    if (message.content.startsWith(prefix + "say")) {
+      message.delete();
+      var args = message.content.split(' ').join(' ').slice(5);
+    
+      if(!args) return message.channel.send("Tu dois me dire quelque chose !")
+
+      message.channel.send(`${args}`);
+    }
+	
+	                              if (message.content.startsWith(prefix + "8ball")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    //oui
+                    "Plutôt, oui",
+                    "Oui.",
+                    "Bien sûr.",
+                    "Faites ainsi.",
+
+                    //non
+                    "Non",
+                    "Mes sources disent non.",
+                    "Les signes disent que non.",
+                    "Je dirais que non",
+
+                    //autres
+                    "Actuellement, je ne peux le prédire ...",
+                    "Impossible à prédire ..."
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Voici la réponse à vôtre question :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez que la boule magique vous réponde, vous devez déjà poser la question !")
+            }
+        
+                      if (message.content.startsWith(prefix + 'ping')) {
+            message.channel.send('Pong! ping :`' + `${Date.now() - message.createdTimestamp}` + ' ms`');
+       }   
+       
+                   if (message.content.startsWith(prefix + "pf")) {
+            pileface = Math.floor(Math.random() * 2 + 0)
+            if (pileface === 0) {
+                message.channel.send("Vous venez d'obtenir : **Pile** !")
+            } else {
+                message.channel.send("Vous venez d'obtenir : **Face** !")
+            }
+          } 
+          
+            if (message.content.startsWith(prefix + "proba10")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    
+                    "1",
+                    "2.",
+                    "3.",
+                    "4",
+                    "5",
+                    "6.",
+                    "7.",
+                    "8",
+                    "9",
+                    "10"
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Proba :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez faire un proba , vous devez déjà mettre le chiffre en 1 et 10!")
+            }
+        }
+      
+            if (message.content.startsWith(prefix + "proba8")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    
+                    "1",
+                    "2.",
+                    "3.",
+                    "4",
+                    "5",
+                    "6.",
+                    "7.",
+                    "8"
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Proba :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez faire un proba , vous devez déjà mettre le chiffre en 1 et 10!")
+            }
+        }
+      
+            if (message.content.startsWith(prefix + "proba6")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    
+                    "1",
+                    "2.",
+                    "3.",
+                    "4",
+                    "5",
+                    "6."
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Proba :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez faire un proba , vous devez déjà mettre le chiffre en 1 et 10!")
+            }
+        }
+        
+            if (message.content.startsWith(prefix + "proba4")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    
+                    "1",
+                    "2.",
+                    "3.",
+                    "4"
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Proba :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez faire un proba , vous devez déjà mettre le chiffre en 1 et 10!")
+            }
+        }
+
+            if (message.content.startsWith(prefix + "proba2")) {
+            if (message.content.substr(prefix.length + 5)) {
+                var ball = [
+                    
+                    "1",
+                    "2."
+                ];
+                var ansball = ball[Math.floor(Math.random() * ball.length)];
+                var ball_embed = new Discord.RichEmbed()
+                    .setColor('4f0982')
+                    .addField(`Proba :`, ansball)
+                    .setTimestamp()
+                    .setFooter("NeCroz")
+                message.channel.send(ball_embed);
+            } else {
+                message.channel.send("Si vous voulez faire un proba , vous devez déjà mettre le chiffre entre 1 et 10!")
+            }
+        }
+      
+      if(message.content.startsWith(prefix + "play")) {
+      	message.delete()
+            var args = message.content.split(' ').join(' ').slice(6);
+    
+      if(!args) return message.channel.send("Tu dois me dire quelque chose !")
+                  client.user.setGame(`${args}`);
+                  message.channel.send("L'activité à été changé en ``" + (`${args}`) + "`` ??🔥🔥") 
+                 } 
+      
+           if(message.content.startsWith(prefix + "love")){
+       	message.delete()
+    var mentionned = message.mentions.members.first();
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM') 
+        .setDescription(mentionned.displayName + " je croie que quelqu'un vous aime 💕 ")
+        .setFooter(`Commande %love`, message.author.avatarURL)
+        message.channel.send(embed)
+     } 
+            
+      //Social
+     
+                  if(message.content.startsWith(prefix + "don")) {
+             message.delete()
+         let embed = new Discord.RichEmbed()
+        .setTitle("Voici le lien qui vous permettra de m'aidé financièrement ❤️❤️")
+        .addField("**PayPal **", "https://paypal.me/necrozytb67?locale.x=fr_FR")
+        .setImage("https://www.paiement-en-ligne.info/wp-content/uploads/2018/06/paypal-avis-e1530005844119.png") 
+        .setColor("BLUE")
+        .setAuthor(message.author.tag, message.author.displayAvatarURL)
+        .setTimestamp()
+        message.channel.send(embed)
+    }
 
          if(message.content.startsWith(prefix + "LVQM")){
 
