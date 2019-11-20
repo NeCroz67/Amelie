@@ -116,32 +116,6 @@ client.on('message', function (message) {
        
        
         
-                if (message.content.startsWith(prefix + "hug")) {
-            var hug = [
-                "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
-                "https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif",
-                "https://media.giphy.com/media/lrr9rHuoJOE0w/giphy.gif",
-                "https://media.giphy.com/media/svXXBgduBsJ1u/giphy.gif"
-            ];
-            var gif = hug[Math.floor(Math.random() * hug.length)];
-            var hug_embed = new Discord.RichEmbed()
-                .setColor('RANDOM')
-                .setTitle(`Tu viens de faire un câlin :`)
-                .setImage(gif)
-                .setTimestamp()
-                .setFooter("NeCroz")
-            message.channel.send(hug_embed);
-
-       } 
-	
-	    if (message.content.startsWith(prefix + "say")) {
-      message.delete();
-      var args = message.content.split(' ').join(' ').slice(5);
-    
-      if(!args) return message.channel.send("Tu dois me dire quelque chose !")
-
-      message.channel.send(`${args}`);
-    }
 	
 	                              if (message.content.startsWith(prefix + "8ball")) {
             if (message.content.substr(prefix.length + 5)) {
