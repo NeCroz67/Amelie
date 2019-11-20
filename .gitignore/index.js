@@ -114,24 +114,6 @@ client.on('message', function (message) {
     
                
        
-       if (message.content.startsWith(prefix + "avatar")) {
-            if (message.guild.member(message.mentions.users.first())) {
-                var user = message.mentions.users.first()
-            } else {
-                var user = message.author
-            }
-            var avatar_embed = new Discord.RichEmbed()
-                .setColor("18d67e")
-                .setTitle("Voici la photo de profil de " + user.username)
-                .setImage(user.avatarURL)
-                .setURL(user.avatarURL)
-                .setTimestamp()
-                .setFooter("NeCroz")
-            message.channel.send(avatar_embed);
-
-
-            console.log(`utilisation de la commande d'avatar par ${message.guild.members.get(message.author.id).displayName}`, message.guild.id)
-        }
        
         
                 if (message.content.startsWith(prefix + "hug")) {
