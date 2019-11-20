@@ -117,40 +117,7 @@ client.on('message', function (message) {
        
         
 	
-	                              if (message.content.startsWith(prefix + "8ball")) {
-            if (message.content.substr(prefix.length + 5)) {
-                var ball = [
-                    //oui
-                    "Plutôt, oui",
-                    "Oui.",
-                    "Bien sûr.",
-                    "Faites ainsi.",
-
-                    //non
-                    "Non",
-                    "Mes sources disent non.",
-                    "Les signes disent que non.",
-                    "Je dirais que non",
-
-                    //autres
-                    "Actuellement, je ne peux le prédire ...",
-                    "Impossible à prédire ..."
-                ];
-                var ansball = ball[Math.floor(Math.random() * ball.length)];
-                var ball_embed = new Discord.RichEmbed()
-                    .setColor('4f0982')
-                    .addField(`Voici la réponse à vôtre question :`, ansball)
-                    .setTimestamp()
-                    .setFooter("NeCroz")
-                message.channel.send(ball_embed);
-            } else {
-                message.channel.send("Si vous voulez que la boule magique vous réponde, vous devez déjà poser la question !")
-            }
-        
-                      if (message.content.startsWith(prefix + 'ping')) {
-            message.channel.send('Pong! ping :`' + `${Date.now() - message.createdTimestamp}` + ' ms`');
-       }   
-       
+	                              
                    if (message.content.startsWith(prefix + "pf")) {
             pileface = Math.floor(Math.random() * 2 + 0)
             if (pileface === 0) {
