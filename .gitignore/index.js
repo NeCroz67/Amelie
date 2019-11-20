@@ -110,41 +110,9 @@ client.on('message', function (message) {
     }
        //Commandes Fun
        
-              if (message.content === prefix + "roulette") {
-        message.delete();
-        let rouletteruss = [':dizzy_face:    :boom: :gun: :bell: Namek :arrow_forward: pas de chance, tu est mort :bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5 ...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:', ':sweat_smile:           :gun:  :bell:Namek :arrow_forward: la chance, en même temps avec une chance sur 5...:bell:']
-        message.channel.send(rouletteruss[Math.floor(Math.random() * rouletteruss.length)])
-    }
+              
     
-               if (message.content.startsWith(prefix + "kiss")) {
-            var kiss = [
-                "https://media.giphy.com/media/KH1CTZtw1iP3W/giphy.gif",
-                "https://media.giphy.com/media/wOtkVwroA6yzK/giphy.gif",
-                "https://media.giphy.com/media/hnNyVPIXgLdle/giphy.gif",
-                "https://media.giphy.com/media/11k3oaUjSlFR4I/giphy.gif"
-            ];
-            var gif = kiss[Math.floor(Math.random() * kiss.length)];
-            var kiss_embed = new Discord.RichEmbed()
-                .setColor('RANDOM')
-                .setTitle(`Tu viens d'embrasser :`)
-                .setImage(gif)
-                .setTimestamp()
-                .setFooter("NeCroz")
-            message.channel.send(kiss_embed);
-
-        }
-        
-                        if (message.content.startsWith(prefix + "rire")) {
-            var rire = "https://media.giphy.com/media/ZqlvCTNHpqrio/giphy.gif"
-            var rire_embed = new Discord.RichEmbed()
-                .setColor('RANDOM')
-                .setTitle(`Haha c drôle einh ? `)
-                .setImage(rire)
-                .setTimestamp()
-                .setFooter("NeCroz")
-            message.channel.send(rire_embed);
-
-       } 
+               
        
        if (message.content.startsWith(prefix + "avatar")) {
             if (message.guild.member(message.mentions.users.first())) {
