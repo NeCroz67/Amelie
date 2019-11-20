@@ -6,7 +6,7 @@ const client = new Discord.Client(); //surtout pas t
 
 const ClientID = "631001858118516736"
 
-var token = (process.env.TOKEN1)
+const token = (process.env.TOKEN1)
 
 const prefix = "'" // Choix de votre préfix entre les ""   
 
@@ -15,6 +15,99 @@ const prefix = "'" // Choix de votre préfix entre les ""
 client.login (process.env.TOKEN1);
 
 client.on('message', function (message) {
+
+	            if(message.content === prefix + "help") {
+            message.delete() 
+        const embed = new Discord.RichEmbed()
+        .setColor('#0000CC' )
+        .setThumbnail("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+        .setTitle("``Voici mes commandes d'aides ! \n Je me surnomme " + (client.user.tag) + "✨ créer par 𝑵𝒆𝑪𝒓𝒐𝒛#9999``")
+        .setDescription("__**Commandes générales, utilisables par tous !**__")
+        .addField("**help**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**fun**", "``Cette command vous montrera toutes les commandes fun disponible 🔱``") 
+        .addField("**admin**", "``Cette commande vous montrera toutes les commandes d'administration disponible.``")
+        .addField("**social**", "``Pour voir tous mes réseaux sociaux !📱``")
+        .addField("**ping**", "``Pour connaître la vitesse de l'hébergeur de " + (client.user.tag) +" . 💻``")
+        .addField("**invite**", "``pour tous ce qui veulent ajouté un bot sur un serveur personnel avec les même commandes que moi. ⚙️``")
+        .setFooter("Bot created bye 𝑵𝒆𝑪𝒓𝒐𝒛#9999 ") 
+        message.channel.send(embed);
+        console.log("Un utilisateur à éffectué la commande d'aide");
+       } 
+       
+
+
+            if(message.content === prefix + "admin") {
+            message.delete() 
+        var help_embed = new Discord.RichEmbed()
+        .setThumbnail("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+        .setColor('#0000CC')
+        .setTitle("Voici mes commandes d'aides !")
+        .setDescription("Commandes admin, utilisables par tous !")
+        .addField("**admin**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**kick**", "``Faites /kick pour expulsé une personne.``")
+        .addField("**ban**", "``Faites /ban pour bannir quelqu'un du serveur. ``")
+        .addField("**id**", "``Faites /id et juste à côté le id de la personne et vous trouverai son pseudo discord .``") 
+        .addField("**serv**", "``Faites /serv pour avoir plus d'informations sur le serveur !! ``")
+        .addField("**warn**", "``Cette command vous permets de warn un utilisateur (l'avertir) ``") 
+        .addField("**unwarn**", "``Cette command vous permets d'enlevé un nombre précis de warn``") 
+        .addField("**seewarn**", "``Sela vous permets de voir tout les warn de l'utilisateur mentionner ``")
+        .setFooter("Menu d'aide - modération")
+        message.channel.send(help_embed);
+        console.log("Un utilisateur a effectué la commande d'aide");
+    
+       } 
+
+            if(message.content === prefix + "fun") {
+            message.delete() 
+        var help_embed = new Discord.RichEmbed()
+        .setThumbnail("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+        .setColor('#0000CC')
+        .setTitle("Voici mes commandes d'aides !")
+        .setDescription("Commandes fun, utilisables par tous !")
+        .addField("**fun**", "``C'est ce qui se trouve sous tes yeux !👀``")
+        .addField("**punch**", "``Cette command vous permez me mettre un bon  grand coup de poin``")
+        .addField("**love**", "``Envie de découvrir des choses sur un futur admirateur secret ? ♀️♂️``")
+        .addField("**kiss**", "``Faire un bisou à une personne💋``" )
+        .addField("**hug**", "``Faire un câlin à une personne💕`` ")
+        .addField("**rire**", "``Lâcher un fou rire avec les minions 😂🤣`` ")
+        .addField("**8ball**", "``Posez une question juste à côté de la Command et elle sera automatiquement répondu``")
+        .addField("**pf**", "``Sa vous tante une partie de Pile ou Face 😏``") 
+        .addField("**avatar**", "``Cette commande vous permets de voir de plus près l'avatar de l'utilisateur mentionné 👌``") 
+        .addField("**roulette**", "``Pour joué à la roulette Russe :sweat_smile:  :gun: 🎰``")
+        .addField("**proba10|proba8|proba6|proba4|proba2**", "``Je pense que vous connaissez les règles du proba. Faites proba(le chiffre paire) direct à côté le proba et les votre chiffre 😜``")
+        .setFooter("Menu d'aide - Fun")
+        message.channel.send(help_embed);
+        console.log("Un utilisateur a effectué la commande Fun");
+    
+       } 
+           
+            if(message.content === prefix + "social") {
+            message.delete() 
+        var help_embed = new Discord.RichEmbed()
+        .setColor('#0000CC')
+        .setThumbnail("https://i.pinimg.com/originals/9b/9e/40/9b9e40c61133e03d57c6ae6d185ebfe0.gif")
+        .setTitle("                                 ")
+        .setDescription("Commandes social , utilisables par tous !")
+        .addField("**instagram 📸**", "``Cette commande vous affichera le lien qui vous mènera sur la chaîne YouTube officiel de NeCroz!``")
+        .addField("**youtube 🎥**", "``Cette commande vous affichera le lien qui vous mènera sur le compte Instagram officiel de NeCroz!``")
+        .setFooter("Menu d'aide - social")
+        message.channel.send(help_embed);
+        console.log("Un utilisateur a effectué la commande d'aide");
+    
+       } 
+
+           if(message.content === prefix + "invite"){
+       	message.delete()
+        let embed = new Discord.RichEmbed()
+     .setTitle("Cliquez ici pour inviter le bot !")
+     .setAuthor("INVITATION")
+     .setColor("RANDOM")
+     .setImage("https://cdn.discordapp.com/attachments/632549635185180685/635103871643025409/xxxnox2.png")
+     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=618824584061386774&permissions=38912&scope=bot")
+     .setThumbnail(message.author.avatarURL)
+  .setFooter(`Commande invite`, message.author.avatarURL)
+        message.channel.send(embed)
+    }
 
          if(message.content.startsWith(prefix + "LVQM")){
 
@@ -54,268 +147,7 @@ client.on('message', function (message) {
       })
 
  }  
-    var fs = require('fs');
- 
-    let warns = JSON.parse(fs.readFileSync("./warns.json", "utf8"));
-     
-    if (message.content.startsWith(prefix + "warn")){
-     
-    if (message.channel.type === "dm") return;
-     
-    var mentionned = message.mentions.users.first();
-     
-    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
-     
-    if(message.mentions.users.size === 0) {
-     
-      return message.channel.send("**Vous n'avez mentionné aucun utilisateur**");
-     
-    }else{
-     
-        const args = message.content.split(' ').slice(1);
-     
-        const mentioned = message.mentions.users.first();
-     
-        if (message.member.hasPermission('MANAGE_GUILD')){
-     
-          if (message.mentions.users.size != 0) {
-     
-            if (args[0] === "<@!"+mentioned.id+">"||args[0] === "<@"+mentioned.id+">") {
-     
-              if (args.slice(1).length != 0) {
-     
-                const date = new Date().toUTCString();
-     
-                if (warns[message.guild.id] === undefined)
-     
-                  warns[message.guild.id] = {};
-     
-                if (warns[message.guild.id][mentioned.id] === undefined)
-     
-                  warns[message.guild.id][mentioned.id] = {};
-     
-                const warnumber = Object.keys(warns[message.guild.id][mentioned.id]).length;
-     
-                if (warns[message.guild.id][mentioned.id][warnumber] === undefined){
-     
-                warns[message.guild.id][mentioned.id]["1"] = {"raison": args.slice(1).join(' '), time: date, user: message.author.id};
-     
-                } else {
-     
-                  warns[message.guild.id][mentioned.id][warnumber+1] = {"raison": args.slice(1).join(' '),
-     
-                    time: date,
-     
-                    user: message.author.id};
-     
-                }
-     
-                fs.writeFile("./warns.json", JSON.stringify(warns), (err) => {if (err) console.error(err);});
-     
-    message.delete();
-     
-                message.channel.send(':warning:` | '+mentionned.tag+' à été averti`');
-     
-    message.mentions.users.first().send(`:warning: **Warn |** depuis **${message.guild.name}** donné par **${message.author.username}**\n\n**Raison:** ` + args.slice(1).join(' '))
-     
-              } else {
-     
-                message.channel.send("Erreur mauvais usage: "+prefix+"warn <user> <raison>");
-     
-              }
-     
-            } else {
-     
-              message.channel.send("Erreur mauvais usage: "+prefix+"warn <user> <raison>");
-     
-            }
-     
-          } else {
-     
-            message.channel.send("Erreur mauvais usage: "+prefix+"warn <user> <raison>");
-     
-          }
-     
-        } else {
-     
-          message.channel.send("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**");
-     
-        }
-     
-      }
-     
-    }
 
-
-      if (message.content.startsWith(prefix+"seewarn")||message.content===prefix+"seewarn") {
-     
-    if (message.channel.type === "dm") return;
-     
-    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
-     
-        const mentioned = message.mentions.users.first();
-     
-        const args = message.content.split(' ').slice(1);
-     
-        if (message.member.hasPermission('MANAGE_GUILD')){
-     
-          if (message.mentions.users.size !== 0) {
-     
-            if (args[0] === "<@!"+mentioned.id+">"||args[0] === "<@"+mentioned.id+">") {
-     
-              try {
-     
-                if (warns[message.guild.id][mentioned.id] === undefined||Object.keys(warns[message.guild.id][mentioned.id]).length === 0) {
-     
-                  message.channel.send("**"+mentioned.tag+"** n'a aucun warn :eyes:");
-     
-                  return;
-     
-                }
-     
-              } catch (err) {
-     
-                message.channel.send("**"+mentioned.tag+"** n'a aucun warn :eyes:");
-     
-                return;
-     
-              }
-     
-              let arr = [];
-     
-              arr.push(`**${mentioned.tag}** a **`+Object.keys(warns[message.guild.id][mentioned.id]).length+"** warns :eyes:");
-     
-              for (var warn in warns[message.guild.id][mentioned.id]) {
-     
-                arr.push(`**${warn}** - **"`+warns[message.guild.id][mentioned.id][warn].raison+
-     
-                "**\" warn donné par **"+message.guild.members.find("id", warns[message.guild.id][mentioned.id][warn].user).user.tag+"** a/le **"+warns[message.guild.id][mentioned.id][warn].time+"**");
-     
-              }
-     
-              message.channel.send(arr.join('\n'));
-     
-            } else {
-     
-              message.channel.send("Erreur mauvais usage: "+prefix+"seewarn <user> <raison>");
-     
-              console.log(args);
-     
-            }
-     
-          } else {
-     
-            message.channel.send("Erreur mauvais usage: "+prefix+"seewarn <user> <raison>");
-     
-          }
-     
-        } else {
-     
-          message.channel.send("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**");
-     
-        }
-     
-      }
-     
-           if (message.content.startsWith(prefix+"unwarn")||message.content===prefix+"unwarn") {
-     
-    if (message.channel.type === "dm") return;
-     
-    if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
-     
-       const mentioned = message.mentions.users.first();
-     
-        const args = message.content.split(' ').slice(1);
-     
-        const arg2 = Number(args[1]);
-     
-        if (message.member.hasPermission('MANAGE_GUILD')){
-     
-          if (message.mentions.users.size != 0) {
-     
-            if (args[0] === "<@!"+mentioned.id+">"||args[0] === "<@"+mentioned.id+">"){
-     
-              if (!isNaN(arg2)) {
-     
-                if (warns[message.guild.id][mentioned.id] === undefined) {
-     
-                  message.channel.send(mentioned.tag+" n'a aucun warn");
-     
-                  return;
-     
-                } if (warns[message.guild.id][mentioned.id][arg2] === undefined) {
-     
-                  message.channel.send("**:x: Ce warn n'existe pas**");
-     
-                  return;
-     
-                }
-     
-                delete warns[message.guild.id][mentioned.id][arg2];
-     
-                var i = 1;
-     
-                Object.keys(warns[message.guild.id][mentioned.id]).forEach(function(key){
-     
-                  var val=warns[message.guild.id][mentioned.id][key];
-     
-                  delete warns[message.guild.id][mentioned.id][key];
-     
-                  key = i;
-     
-                  warns[message.guild.id][mentioned.id][key]=val;
-     
-                  i++;
-     
-                });
-     
-                fs.writeFile("./warns.json", JSON.stringify(warns), (err) => {if (err) console.error(err);});
-     
-                if (Object.keys(warns[message.guild.id][mentioned.id]).length === 0) {
-     
-                  delete warns[message.guild.id][mentioned.id];
-     
-                }
-     
-                message.channel.send(`Le warn de **${mentioned.tag}**\': **${args[1]}** a été enlevé avec succès!`);
-     
-                return;
-     
-              } if (args[1] === "tout") {
-     
-                delete warns[message.guild.id][mentioned.id];
-     
-                fs.writeFile("./warns.json", JSON.stringify(warns), (err) => {if (err) console.error(err);});
-     
-                message.channel.send(`Les warns de **${mentioned.tag}** a été enlevé avec succès!`);
-     
-                return;
-     
-              } else {
-     
-                message.channel.send("Erreur mauvais usage: "+prefix+"unwarn <utilisateur> <nombre>");
-     
-              }
-     
-            } else {
-     
-              message.channel.send("Erreur mauvais usage: "+prefix+"unwarn <utilisateur> <nombre>");
-     
-            }
-     
-          } else {
-     
-           message.channel.send("Erreur mauvais usage: "+prefix+"unwarn <utilisateur> <nombre>");
-     
-          }
-     
-        } else {
-     
-          message.channel.send("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**");
-     
-        }
-      }
-      
       if(message.content.startsWith(prefix + "stream" )){
     if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `ME MODIFIER` dans ce serveur**").catch(console.error);
             var args = message.content.split(' ').join(' ').slice(8);
